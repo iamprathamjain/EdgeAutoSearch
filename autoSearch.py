@@ -10,7 +10,14 @@ def search(num):
 
     for i in range(num):
         print(i)
-        pyautogui.click(463 ,168)
+        try:
+            bar= pyautogui.locateOnScreen('SCWI.png',confidence=0.7)
+            x,y=pyautogui.center(bar)
+            pyautogui.moveTo(int(x),int(y))
+            pyautogui.moveTo(int(x),int(y)-50)
+            pyautogui.click(int(x),int(y)-50)
+        except:
+            pyautogui.click(463 ,168)
         pyautogui.hotkey('ctrl','shift','right')
         pyautogui.hotkey('ctrl','a')
         pyautogui.press('backspace')
