@@ -29,6 +29,7 @@ def search(num):
         
         word=random.choice(words)
         pyautogui.write(f'{word}{i}', interval=0.01)
+        # pyautogui.write(f'{word}{i}', interval=0.01)
         pyautogui.press('enter')
         tm.sleep(2)
         currentMouseX, currentMouseY = pyautogui.position()
@@ -38,8 +39,8 @@ def search(num):
 
 
 start=8
-num_of_ids=9
-num=35
+num_of_ids=10
+num=2
 
 
 for ii in range(num_of_ids):
